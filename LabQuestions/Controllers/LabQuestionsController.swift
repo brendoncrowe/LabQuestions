@@ -24,6 +24,7 @@ class LabQuestionsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         fetchQuestions()
         configureRefreshControl()
         navigationItem.largeTitleDisplayMode = .never
@@ -93,4 +94,14 @@ extension LabQuestionsController: UITableViewDataSource {
         cell.contentConfiguration = content
         return cell
     }
+
+}
+
+
+extension LabQuestionsController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 }

@@ -57,7 +57,7 @@ class CreateQuestionController: UIViewController {
     }
     
     @IBAction func createQuestion(_ sender: UIBarButtonItem) {
-      // 3 required paramerters to create a PostedQuestion
+      // 3 required parameters to create a PostedQuestion
       
       // disable the create bar button so multiple requests won't occur
       sender.isEnabled = false
